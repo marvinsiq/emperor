@@ -2,18 +2,15 @@
 # You can use other adapters like:
 #
 case Padrino.env
-    when :development 
-			ActiveRecord::Base.configurations[:development] = {
-				:adapter   => 'postgresql',
-				:database  => "emperor_development",
-				:username  => 'postgres',
-				:password  => 'postgres',
-				:host      => 'localhost',
-				:port      => 5432
-			}
-
-	when :production
-		ActiveRecord::Base.establish_connection(ENV["DATABASE_URL"])
+  when :development 
+		ActiveRecord::Base.configurations[:development] = {
+			:adapter   => 'postgresql',
+			:database  => "emperor_development",
+			:username  => 'postgres',
+			:password  => 'postgres',
+			:host      => 'localhost',
+			:port      => 5432
+		}
 
 	when :test 
 		ActiveRecord::Base.configurations[:test] = {
@@ -44,7 +41,12 @@ ActiveSupport.use_standard_json_time_format = true
 ActiveSupport.escape_html_entities_in_json = false
 
 # Now we can estabilish connection with our db
-ActiveRecord::Base.establish_connection(ActiveRecord::Base.configurations[Padrino.env])
+
+if Padrino.env == :production
+	ActiveRecord::Base.establish_connection(ENV["DATABASE_URL"])
+else
+	ActiveRecord::Base.establish_connection(ActiveRecord::Base.configurations[Padrino.env])
+end
 
 ActiveSupport::Inflector.inflections do |inflect|
   inflect.irregular 'perfil', 'perfis'

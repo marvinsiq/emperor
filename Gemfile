@@ -13,6 +13,7 @@ gem 'sass'
 gem 'erubis', "~> 2.7.0"
 gem 'activerecord', :require => "active_record"
 gem 'activerecord-postgresql-adapter'
+gem 'activerecord_url_connections'
 gem 'bcrypt-ruby'
 
 # Test requirements
