@@ -47,8 +47,8 @@ class Emperor < Padrino::Application
   set :delivery_method, :smtp => { 
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :user_name            => 'emperor.imperio.mal@gmail.com',
-    :password             => 'imperiomal',
+    :user_name            => ENV['APP_EMAIL]',
+    :password             => ENV['APP_EMAIL_PASS'],
     :authentication       => :plain,
     :enable_starttls_auto => true  
   }
