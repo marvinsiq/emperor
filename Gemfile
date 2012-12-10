@@ -17,10 +17,10 @@ gem 'activerecord_url_connections'
 gem 'bcrypt-ruby'
 
 # Test requirements
-gem 'rspec', :group => "test"
-gem 'rack-test', :require => "rack/test", :group => "test"
-gem 'capybara', :group => "test"
-gem 'cucumber', :group => "test"
+gem 'rspec'
+gem 'rack-test', :require => "rack/test"
+gem 'capybara'
+gem 'cucumber'
 
 # Padrino Stable Gem
 gem 'padrino', '0.10.5'
