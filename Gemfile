@@ -12,7 +12,7 @@ gem 'sinatra-flash', :require => 'sinatra/flash'
 gem 'sass'
 gem 'erubis', "~> 2.7.0"
 gem 'activerecord', :require => "active_record"
-gem 'sqlite3'
+gem 'activerecord-postgresql-adapter'
 gem 'bcrypt-ruby'
 
 # Test requirements

@@ -1,35 +1,37 @@
 ##
 # You can use other adapters like:
 #
-#   ActiveRecord::Base.configurations[:development] = {
-#     :adapter   => 'mysql',
-#     :encoding  => 'utf8',
-#     :reconnect => true,
-#     :database  => 'your_database',
-#     :pool      => 5,
-#     :username  => 'root',
-#     :password  => '',
-#     :host      => 'localhost',
-#     :socket    => '/tmp/mysql.sock'
-#   }
-#
+
 ActiveRecord::Base.configurations[:development] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', "emperor_development.db")
+  :adapter   => 'postgresql',
+  :database  => "emperor_development",
+  :username  => 'postgres',
+  :password  => 'postgres',
+  :host      => 'localhost',
+  :port      => 5432
 
 }
 
 ActiveRecord::Base.configurations[:production] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', "emperor_production.db")
+  :adapter   => 'postgresql',
+  :database  => "emperor_production",
+  :username  => 'postgres',
+  :password  => 'postgres',
+  :host      => 'localhost',
+  :port      => 5432
 
 }
 
 ActiveRecord::Base.configurations[:test] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', "emperor_test.db")
+  :adapter   => 'postgresql',
+  :database  => "emperor_test",
+  :username  => 'postgres',
+  :password  => 'postgres',
+  :host      => 'localhost',
+  :port      => 5432
 
 }
+
 
 # Setup our logger
 ActiveRecord::Base.logger = logger
