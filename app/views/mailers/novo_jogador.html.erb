@@ -1,0 +1,14 @@
+<h2>Império do Mal!</h2>
+<br>
+<p align='justify'>Você registrou o usuário <u><%= usuario.nome%></u> no Império do Mal. 
+Para que o cadastro seja finalizado e você possa começar a jogar é necessário que atives 
+o seu usuário. Você pode ativar seu usuário de duas maneiras:
+
+<p>Copiando e colando na barra de endereços do seu navegador o endereço
+<br>http://<%= dominio %>/usuarios/novo/jogador/<%= usuario.id %>/<%= usuario.codigo %>
+
+<p>Clicando no link <b><a href='http://<%= dominio %>/usuarios/novo/jogador/<%= usuario.id %>/<%= usuario.codigo %>'>Ativar</a></b>
+<p>
+Atenciosamente,
+<p>
+Equipe Império do Mal.

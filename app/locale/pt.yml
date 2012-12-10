@@ -1,0 +1,8 @@
+pt:
+  models:
+    errors:
+      template:
+        header:
+          one:   "1 erro impediu que este(a) %{model} fosse salvo."
+          other: "%{count} erros impediram que este(a) %{model} fosse salvo."
+        body:    "Você deve corrigir os campos a seguir:"

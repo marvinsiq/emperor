@@ -1,0 +1,28 @@
+<div class='message-error'>
+  <%= params['login_mensagem_erro'] %>
+</div>
+
+<% form_tag :login, :method => 'put' do %>
+  Usuário: <%= text_field_tag :usuario, :value => params['usuario'] %>
+  <br>
+  Senha: <%= password_field_tag :senha, :value => params['senha'] %>
+  <br>
+  <%= submit_tag 'Login' %>
+  <input type='reset' value='Limpar'>
+  <br>
+  <%= link_to 'Esqueceu sua senha?', url_for(:usuarios, :recupera_senha , :email => 'none') %>
+<% end %>
+
+<p>
+
+<ul>
+  <li>
+    <%= link_to 'Criar conta', url_for(:usuarios, :novo) %>
+  </li>
+  <li>
+    <%= link_to 'Guia do jogo', url_for(:guia) %>
+  </li>
+  <li>
+    <%= link_to 'Sobre', url_for(:sobre) %>
+  </li>
+</ul>

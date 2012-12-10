@@ -1,0 +1,17 @@
+<h2>Recupera senha</h2>
+
+<div class='message-error'>
+  <%= params['mensagem_erro'] %>
+</div>
+
+<% form_tag :gera_nova_senha, :method => 'put' do %>
+  <div>
+    e-mail:
+    <%= text_field_tag :email, :value => params[:email] %>
+  </div>
+
+  <div>
+    <%= submit_tag 'Solicitar' %>
+    <%= submit_tag 'Cancelar', :onclick => "window.location='#{url(:index)}';return false" %>
+  </div>
+<% end %>

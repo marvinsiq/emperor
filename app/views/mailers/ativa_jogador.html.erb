@@ -1,0 +1,16 @@
+<h2>Seja bem vindo ao Império do Mal!</h2>
+<br>
+<p align='justify'>
+Olá <%= usuario.nome %>,
+<br><br>
+O seu cadastro foi ativado e agora você já pode começar a jogar. Bastando pra isso acessar o endereço
+<a href='http://<%= dominio %>'>http://<%= dominio %></a> e informar o nome do seu usuário (<%= usuario.nome %>)
+e a senha. Caso não se lembre de sua senha, você poderá recuperá-la através do endereço
+<a href='http://<%= dominio %>/recupera_senha/<%= usuario.email %>'> 
+http://<%= dominio %>/usuarios/recupera_senha?email=<%= usuario.email %></a> e seguir as instruções.
+<p>
+Esperamos que se divirta.
+<p>
+Atenciosamente,
+<p>
+Equipe Império do Mal.

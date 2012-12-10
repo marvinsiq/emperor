@@ -1,0 +1,24 @@
+pt:
+  models:
+    cla:
+      name: Clã
+      attributes:
+        id: Identificador
+        nome: Nome
+        descricao: Descrição
+        created_at: Criado em
+        updated_at: Atualizado em
+  activerecord:
+    errors:
+      models:
+        cla:
+          attributes:
+            nome:
+              blank: deve ser informado
+              taken: já existe
+              too_short: deve ter pelo menos %{count} caracteres
+              too_long: deve ter no máximo %{count} caracteres
+            descricao:
+              blank: deve ser informado
+              too_short: deve ter pelo menos %{count} caracteres
+              too_long: deve ter no máximo %{count} caracteres

@@ -1,0 +1,40 @@
+<h2>Novo jogador</h2>
+<% form_for :usuario, url(:usuarios, :cria) do |f| %>
+  <div class='message-error'>
+    <%= f.error_messages %>
+  </div>
+
+  <div>
+    <%= f.label 'Apelido' %>
+    <%= f.text_field :nome %>
+  </div>
+
+  <div>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div>
+    <%= f.label :senha %>
+    <%= f.password_field :senha %>
+  </div>
+
+  <div>
+    <%= f.label 'Confirma senha' %>
+    <%= f.password_field :senha_confirmation %>
+  </div>
+
+  <div>
+    <%= f.label 'Civilização' %>
+    <%= f.select :cla_id, :options => todos_clas_select %>
+  </div>
+
+  <div>
+    <%= check_box_tag :concorda_termos, :value => params['concorda_termos'] %> Li e aceito os termos e condições de uso do jogo.
+  </div>
+
+  <div>
+    <%= f.submit 'Salvar' %>
+    <%= f.submit 'Cancelar', :onclick => "window.location='#{url(:index)}';return false" %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+.message-notice {
+  padding:10px;
+  color:blue;
+}
+
+.message-info {
+  padding:10px;
+  color:green;
+}
+
+.message-warning {
+  padding:10px;
+  color:yellow;
+}
+
+.message-error {
+  padding:10px;
+  color:red;
+}

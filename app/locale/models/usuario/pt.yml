@@ -1,0 +1,47 @@
+pt:
+  models:
+    usuario:
+      name: Usuário
+      attributes:
+        id: Identificador
+        nome: Nome
+        email: e-mail
+        senha: Senha
+        senha_confirmation: Confirma senha
+        situacao: Situação
+        codigo: Código
+        cla: Civilização
+        perfil: Perfil
+        created_at: Criado em
+        updated_at: Atualizado em
+  activerecord:
+    errors:
+      models:
+        usuario:
+          attributes:
+            nome:
+              blank: deve ser informado
+              taken: já é utilizado por outro usuário
+              too_short: deve ter pelo menos %{count} caracteres
+              too_long: deve ter no máximo %{count} caracteres
+            senha:
+              blank: deve ser informado
+              too_short: deve ter pelo menos %{count} caracteres
+              too_long: deve ter no máximo %{count} caracteres
+              confirmation: deve ser igual à senha confirmada
+            senha_confirmation:
+              blank: deve ser informado              
+            email:
+              blank: deve ser informado
+              taken: já está relacionado a outro usuário
+              too_short: deve ter pelo menos %{count} caracteres
+              too_long: deve ter no máximo %{count} caracteres
+            situacao:
+              blank: deve ser informado
+              inclusion: deve ter um dos valores (ativado, desativado e banido)
+            codigo:
+              blank: deve ser informado
+            cla:
+              blank: deve ser informado
+            perfis:
+              invalid: erro de validação
