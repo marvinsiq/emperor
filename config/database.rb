@@ -1,36 +1,30 @@
 ##
 # You can use other adapters like:
 #
+case Padrino.env
+    when :development 
+			ActiveRecord::Base.configurations[:development] = {
+				:adapter   => 'postgresql',
+				:database  => "emperor_development",
+				:username  => 'postgres',
+				:password  => 'postgres',
+				:host      => 'localhost',
+				:port      => 5432
+			}
 
-ActiveRecord::Base.configurations[:development] = {
-  :adapter   => 'postgresql',
-  :database  => "emperor_development",
-  :username  => 'postgres',
-  :password  => 'postgres',
-  :host      => 'localhost',
-  :port      => 5432
+	when :production
+		ActiveRecord::Base.establish_connection(ENV["DATABASE_URL"])
 
-}
-
-ActiveRecord::Base.configurations[:production] = {
-  :adapter   => 'postgresql',
-  :database  => "emperor_production",
-  :username  => 'postgres',
-  :password  => 'postgres',
-  :host      => 'localhost',
-  :port      => 5432
-
-}
-
-ActiveRecord::Base.configurations[:test] = {
-  :adapter   => 'postgresql',
-  :database  => "emperor_test",
-  :username  => 'postgres',
-  :password  => 'postgres',
-  :host      => 'localhost',
-  :port      => 5432
-
-}
+	when :test 
+		ActiveRecord::Base.configurations[:test] = {
+			:adapter   => 'postgresql',
+			:database  => "emperor_test",
+			:username  => 'postgres',
+			:password  => 'postgres',
+			:host      => 'localhost',
+			:port      => 5432
+		}
+end
 
 
 # Setup our logger
