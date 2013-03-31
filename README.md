@@ -2,7 +2,7 @@
 
 ## Preparação do ambiente de desenvolvimento Ruby.
 
-### Instação via pacotes precompilados (ambientes baseados em Fedora/CentOS/HedRat).
+### Instalação via pacotes precompilados (ambientes baseados em Fedora/CentOS/HedRat).
 
 #### Compilador C/C++
 yum install gcc-c++
@@ -99,7 +99,7 @@ gem install padrino
 * http://git.or.cz/course/svn.html
 
 ### Download do Projeto
-git clone git@github.com:mgalvao/emperor.git
+git clone git@github.com:marvinsiq/emperor.git
 
 ### Instalação do Projeto
 
